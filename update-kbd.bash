@@ -9,3 +9,5 @@ wget https://raw.githubusercontent.com/gooberlogic/nix-flakes/refs/heads/des-nix
 sed -i -n '/\s*keyboards\.default\.config = \x27\x27\s*/,/\s*\x27\x27;\s*/p' $KBD_FILE
 sed -i '1d;$d' $KBD_FILE
 sed -i 's/^      //' $KBD_FILE
+
+echo -e "\n(defcfg delegate-to-first-layer yes)" >> $KBD_FILE
